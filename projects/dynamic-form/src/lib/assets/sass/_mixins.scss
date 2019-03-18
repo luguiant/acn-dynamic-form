@@ -1,0 +1,10 @@
+@mixin box-default {
+  background-color: $white;
+  border: solid 1px $border-gray;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px 0 $shadow-black-07;
+}
+
+@mixin font-size($size, $base: 16px) {
+  font-size: ($size / $base) * 1rem;
+}

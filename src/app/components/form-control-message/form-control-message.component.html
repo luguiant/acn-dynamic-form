@@ -1,0 +1,10 @@
+<span class="helper row" [ngClass]="{'error':config.hasError}">
+  <span [id]="config.id + '_message'" class="col p-0 m-0">
+    <ng-container *ngIf="(config.helper? config.helper.level === 'info' : false) || config.hasError ">
+      {{config.hasError? getErrorMessage(group.controls[config.name], config.validation ): (config.helper.message) }}
+    </ng-container>
+  </span>
+  <span [id]="config.id + '_counter'" class="col-1 p-0 m-0 counter" *ngIf="config.helper? config.helper.charCounter:false">
+    {{getValue().length+'/'+config.helper.charCounter}}
+  </span>
+</span>

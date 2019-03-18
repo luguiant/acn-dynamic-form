@@ -1,0 +1,12 @@
+<div class="dynamic-field">
+  <div class="form-select" [formGroup]="group" [class.error]="config.hasError">
+    <select [disabled]="config.disabled" [id]="config.id" [value]="config.value" [formControlName]="config.name" (focus)="config.hasError=false" [class.required-field]="required">
+      <option [id]="config.id + option.label" *ngFor="let option of config.options" [value]="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+    <label for="{{ config.id }}" class="no-pointer-events">{{ config.label }}</label>
+    <i class="fal fa-angle-down no-pointer-events"></i>
+  </div>
+  <form-control-message [group]="group" [config]="config"></form-control-message>
+</div>

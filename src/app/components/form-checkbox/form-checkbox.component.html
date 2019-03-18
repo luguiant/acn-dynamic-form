@@ -1,0 +1,13 @@
+<div class="dynamic-field form-input" [formGroup]="group">
+  <div class="checkbox-field">
+    <div class="content">
+      <label class="container">
+        <input id="{{ config.id }}" type="checkbox" [formControlName]="config.name" [name]="config.name" [checked]="config.value">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  </div>
+  <label for="{{config.name}}" class="text-checkbox" id="{{ config.id }}-label">
+    {{config.label}}
+  </label>
+</div>

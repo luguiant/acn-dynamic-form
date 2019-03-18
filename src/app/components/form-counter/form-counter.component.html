@@ -1,0 +1,10 @@
+<div>
+  <label class="counter-container">
+    {{config.label}}
+  </label>
+  <ng-container *ngIf="config.tooltip">
+    <form-tooltip class="tooltip" icon="fal fa-info-circle" [title]="config.tooltip" idTooltip="{{config.id}}Tooltip"></form-tooltip>
+  </ng-container>
+  <p class="counter" [id]="config.id">{{group.controls[config.name].value}}
+  </p>
+</div>

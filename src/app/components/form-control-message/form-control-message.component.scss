@@ -1,0 +1,14 @@
+@import '../../../sass/_variables';
+.helper {
+  font-size: 0.75rem;
+  margin-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  color: $text-gray-02;
+  &.error {
+    color: $primary-red !important;
+  }
+  .counter {
+    text-align: right;
+  }
+}

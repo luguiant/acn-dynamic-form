@@ -1,0 +1,10 @@
+<div class="row {{config.style}}" [formGroup]="group">
+  <div class="col p-0 m-0" *ngFor="let radio of config.options">
+    <label [id]="config.id" class="container">
+      {{ radio.label }}
+      <span [class]="radio.type" [id]="radio.id + '_label'"> {{radio.type=== 'currency'?(radio.value | currency):radio.value}}</span>
+      <input [id]="radio.id" type="radio" [value]="radio.id" [formControlName]="config.name">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+</div>

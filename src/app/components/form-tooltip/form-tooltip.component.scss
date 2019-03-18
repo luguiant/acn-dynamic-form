@@ -1,0 +1,38 @@
+@import '../../assets/sass/variables';
+@import '../../assets/sass/mixins';
+.tooltip {
+  display: inline;
+  position: relative;
+  &:hover {
+    &:after {
+      background: #58595B;
+      border-radius: 5px;
+      bottom: 26px;
+      color: #ffffff;
+      content: attr(message);
+      left: -16rem;
+      position: absolute;
+      padding: 5px 15px;
+      position: absolute;
+      z-index: 9999;
+      min-width: 290px;
+      font-size: .8em;
+      justify-content: safe;
+      text-align: justify;
+    }
+    &:before {
+      border: solid;
+      border-color: #333 transparent;
+      border-width: 6px 6px 0 6px;
+      bottom: 20px;
+      content: "";
+      left: 10%;
+      position: absolute;
+      z-index: 99;
+    }
+  }
+  i {
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+}

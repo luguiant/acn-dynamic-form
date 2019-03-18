@@ -1,0 +1,12 @@
+<div [id]="config.id" class="form-label"  [ngClass]="{'pt-3':(config.title && !config.subtitle)}">
+  <label *ngIf="config.title" class=" title px-5" >
+    {{config.title}}
+  </label>
+  <p *ngIf="config.subtitle === 'date'" class="label-value  px-3">{{config.value}}</p>
+  <span *ngIf="config.label" [class]="'label label-'+config.style">{{ config.label }}</span>
+  <div *ngIf="config.message" class="message">
+    <span *ngFor="let msg of config.message" [class]="msg.class">{{ msg.label }}&nbsp;</span>
+  </div>
+  <span *ngIf="config.title && config.subtitle !='date'" [class]="config.style">{{ config.subtitle}}</span>
+  <span *ngIf="config.value && !config.subtitle" [class]="config.style">{{ config.value}}</span>
+</div>

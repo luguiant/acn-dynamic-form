@@ -1,0 +1,70 @@
+@import '../../../sass/_variables';
+.form-input {
+  min-height: 5rem;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked~.checkmark:after {
+      display: block;
+    }
+    &:checked~.checkmark {
+      background-color: $background-gray-01;
+    }
+  }
+  &:hover input~.checkmark {
+    background-color: $background-gray-01;
+  }
+  &:checked~.checkmark {
+    background-color: $background-gray-01;
+  }
+  .checkmark {
+    &:after {
+      top: 2px;
+      right: 5px;
+      width: 7px;
+      height: 12px;
+      border: solid $white;
+      border-radius: 1px;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background: white;
+  border: solid 1.5px $background-gray-01;
+  border-radius: 3px;
+  &:active {
+    background-color: $background-gray-01;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.text-checkbox {
+  margin-left: 1.5rem;
+}

@@ -1,0 +1,85 @@
+@import '../../../sass/_variables';
+@import '../../../sass/mixins';
+.dynamic-field {
+  min-height: 6rem;
+}
+
+.tooltip {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.form-select {
+  position: relative;
+  height: 50px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: $background-gray-05;
+  label,
+  select {
+    padding-left: 15px;
+    transition: all 0.2s;
+  }
+  label {
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  select {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    background-color: transparent;
+    appearance: none;
+    border: 0;
+    border-bottom: 2px solid $background-gray-02;
+    border-radius: 0;
+    &::-ms-expand {
+      display: none;
+    }
+    &:focus {
+      border-bottom-color: $background-yellow-01;
+    }
+    &.required-field.ng-valid,
+    &:not(.required-field).ng-valid.ng-dirty,
+    &:focus {
+      +label {
+        top: 0px;
+        @include font-size(13px);
+        color: $text-gray-02;
+      }
+    }
+    &.required-field.ng-valid,
+    &:not(.required-field).ng-valid.ng-dirty {
+      &:not(:focus) {
+        border-bottom-color: $secondary;
+      }
+    }
+  }
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    @include font-size(32px);
+    transform: scaleX(1.25);
+    color: $background-gray-01;
+  }
+  &.error {
+    label {
+      color: $primary-red;
+    }
+    select {
+      border-bottom-color: $primary-red;
+    }
+  }
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}

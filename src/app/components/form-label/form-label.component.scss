@@ -1,0 +1,32 @@
+@import '../../../sass/_variables';
+.form-label {
+  margin-bottom: 10px;
+  .label-bold {
+    font-weight: bold;
+  }
+  .label-currency {
+    font-weight: bold;
+  }
+  .currency {
+    font-weight: bold;
+    float: right;
+    color: $secondary;
+    font-size: 1.125rem;
+  }
+  .label {
+    font-size: 1.125rem;
+  }
+  .message {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+  .title {
+    font-size: 0.75rem;
+
+  }
+  .label-value {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+}

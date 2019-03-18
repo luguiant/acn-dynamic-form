@@ -1,0 +1,15 @@
+@import '../../../sass/_variables';
+.counter-container {
+  font-size: 13px;
+  color: $text-gray-02;
+}
+
+.counter {
+  font-weight: bold;
+  color: $text-gray-04;
+}
+
+.tooltip {
+  margin-left: 1rem;
+  margin-top: 0.125rem;
+}
