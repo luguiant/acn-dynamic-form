@@ -6,17 +6,8 @@ import { forceValidationError } from './consts/validators';
 
 @Component({
   exportAs: 'dynamicForm',
-  selector: 'dynamic-form',
-  template: `<form class="dynamic-form" [formGroup]="form" (submit)="handleSubmit($event)" (reset)="handleReset($event)">
-  <div class="row">
-    <ng-container *ngFor="let field of config">
-      <div [hidden]="!validateParent(field)"  class="{{ field.class }}">
-        <ng-container dynamicField [config]="field" [group]="form">
-        </ng-container>
-      </div>
-    </ng-container>
-  </div>
-</form>`
+  selector: 'acn-dynamic-form',
+  templateUrl: './dynamic-form.component.html'
 })
 export class DynamicFormComponent implements OnChanges, OnInit, AfterViewInit {
 
@@ -97,7 +88,7 @@ export class DynamicFormComponent implements OnChanges, OnInit, AfterViewInit {
     this.submit.emit(this.unformatValues());
   }
 
-  handleReset() {
+  handleReset(event: any) {
     this.reset.emit();
   }
 

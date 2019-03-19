@@ -1,18 +1,9 @@
 {
-  "name": "dynamic-form",
-  "version": "0.0.1",
+  "name": "acn-form",
+  "version": "0.0.2",
+  "private": false,
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
-    "@angular/animations": "~7.2.0",
-    "@angular/compiler": "~7.2.0",
-    "@angular/forms": "~7.2.0",
-    "@angular/platform-browser": "~7.2.0",
-    "@angular/platform-browser-dynamic": "~7.2.0",
-    "moment": "^2.22.2",
-    "rxjs": "^6.3.3",
-    "rxjs-compat": "^6.3.3",
-    "core-js": "^2.5.4",
-    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
   }
 }

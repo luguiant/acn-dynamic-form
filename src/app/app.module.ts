@@ -16,12 +16,6 @@ const components =  [
   FormButtonComponent
 ];
 
-const DEPENDENCY = [
-  FormCheckboxComponent,
-  FormSelectComponent,
-  FormButtonComponent
-];
-
 const TYPES: { [type: string]: Type<Field> } = {
   submit: FormButtonComponent,
   reset: FormButtonComponent,
@@ -29,23 +23,12 @@ const TYPES: { [type: string]: Type<Field> } = {
   checkbox: FormCheckboxComponent
 };
 
-const EXPORTS_LIB = [
-  FormCheckboxComponent,
-  FormSelectComponent,
-  FormButtonComponent
-];
-
-const IMPORTS = [
-  FormCheckboxComponent,
-  FormSelectComponent,
-  FormButtonComponent
-];  
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    ...DEPENDENCY,
+    FormCheckboxComponent,
+    FormSelectComponent,
+    FormButtonComponent,
     FormControlMessageComponent
   ],
   imports: [
@@ -53,10 +36,8 @@ const IMPORTS = [
     FormsModule,
     ReactiveFormsModule,
     DynamicFormModule.forRoot(
-      { typesInput: TYPES, 
-        dependency: DEPENDENCY,
-        entryComponents: components,
-        imports: IMPORTS
+      { typesInput: TYPES,
+        entryComponents: components
       }
     )
   ],

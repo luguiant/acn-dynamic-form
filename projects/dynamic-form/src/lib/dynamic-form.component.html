@@ -1,0 +1,10 @@
+<form class="dynamic-form" [formGroup]="form" (submit)="handleSubmit($event)" (reset)="handleReset($event)">
+    <div class="row">
+      <ng-container *ngFor="let field of config">
+        <div [hidden]="!validateParent(field)"  class="{{ field.class }}">
+          <ng-container dynamicField [config]="field" [group]="form">
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </form>
